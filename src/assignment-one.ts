@@ -1,4 +1,4 @@
-{
+
     // Problem-1
     function formatString(input: string, toUpper?: boolean): string {
         if (toUpper === false) {
@@ -10,9 +10,9 @@
     }
 
     // formatString("Hello", true);
-}
 
-{
+    
+
     // Problem-2
     const books = [
         { title: "Book A", rating: 4.5 },
@@ -26,4 +26,15 @@
     }
 
     // console.log(filterByRating(books))
-}
+
+
+    // Problem-3
+    const arrays = []
+
+    function concatenateArrays<T>(...arrays: T[][]): T[] {
+        const concatArray = arrays.flat();
+        console.log(concatArray)
+        return concatArray
+      }
+
+    // concatenateArrays(["a", "b"], ["c"], ['d']); 
