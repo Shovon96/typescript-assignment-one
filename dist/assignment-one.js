@@ -10,7 +10,18 @@
         }
         return "Invalid input";
     }
-    formatString("Hello"); // Output: "HELLO"
-    formatString("Hello", true); // Output: "HELLO"
-    formatString("Hello", false); // Output: "hello"
+    // formatString("Hello", true);
+}
+{
+    // Problem-2
+    const books = [
+        { title: "Book A", rating: 4.5 },
+        { title: "Book B", rating: 3.2 },
+        { title: "Book C", rating: 5.0 }
+    ];
+    function filterByRating(items) {
+        const filterBooks = items.filter(book => book.rating >= 4);
+        return filterBooks;
+    }
+    // console.log(filterByRating(books))
 }
