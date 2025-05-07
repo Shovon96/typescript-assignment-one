@@ -84,3 +84,27 @@ function processValue(value: string | number): number {
 
 // console.log(processValue("Hello"));
 // console.log(processValue(12)); 
+
+
+
+// Problem-6
+const products = [
+    { name: "Pen", price: 10 },
+    { name: "Notebook", price: 25 },
+    { name: "Bag", price: 50 }
+];
+
+interface Product {
+    name: string;
+    price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+    if (products.length === 0) {
+        return null;
+    } else {
+        const maxPrice = Math.max(...products.map(product => product.price));
+        return products.find(product => product.price === maxPrice) || null;
+    }
+}
+console.log(getMostExpensiveProduct(products));  
