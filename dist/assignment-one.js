@@ -22,10 +22,31 @@ function filterByRating(items) {
 }
 // console.log(filterByRating(books))
 // Problem-3
-const arrays = [];
 function concatenateArrays(...arrays) {
     const concatArray = arrays.flat();
     console.log(concatArray);
     return concatArray;
 }
 // concatenateArrays(["a", "b"], ["c"], ['d']); 
+// Problem-4
+class Vehicle {
+    constructor(make, year) {
+        this.make = make;
+        this.year = year;
+    }
+    getInfo() {
+        return `Make: ${this.make}, Year: ${this.year}`;
+    }
+}
+class Car extends Vehicle {
+    constructor(make, year, model) {
+        super(make, year);
+        this.model = model;
+    }
+    getModel() {
+        return `Model: ${this.model}`;
+    }
+}
+const myCar = new Car("Toyota", 2020, "Corolla");
+// console.log(myCar.getInfo());
+// console.log(myCar.getModel()); 
