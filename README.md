@@ -11,11 +11,11 @@ Type inference means that TypeScript automatically understands what the type of 
 
 <b>For example:</b>
 
-<pre> \`\`\`typescript 
+```typescript 
 const x = 10; 
 const y = x + 2; 
 console.log(y); // Output: 12 
-\`\`\` </pre>
+```
 
 In this code, the TypeScript compiler can infer that the type of x is number. This is because x is being assigned a number value. The compiler can also infer that the type of y is number, because y is the result of adding two numbers together.
 
