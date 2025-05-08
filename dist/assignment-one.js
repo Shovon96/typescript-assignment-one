@@ -8,7 +8,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-// Problem-1
 function formatString(input, toUpper) {
     if (toUpper === false) {
         console.log(input.toLowerCase());
@@ -18,8 +17,6 @@ function formatString(input, toUpper) {
     }
     return "Invalid input";
 }
-// formatString("Hello", true);
-// Problem-2
 const books = [
     { title: "Book A", rating: 4.5 },
     { title: "Book B", rating: 3.2 },
@@ -29,15 +26,11 @@ function filterByRating(items) {
     const filterBooks = items.filter(book => book.rating >= 4);
     return filterBooks;
 }
-// console.log(filterByRating(books))
-// Problem-3
 function concatenateArrays(...arrays) {
     const concatArray = arrays.flat();
     console.log(concatArray);
     return concatArray;
 }
-// concatenateArrays(["a", "b"], ["c"], ['d']); 
-// Problem-4
 class Vehicle {
     constructor(make, year) {
         this.make = make;
@@ -57,9 +50,6 @@ class Car extends Vehicle {
     }
 }
 const myCar = new Car("Toyota", 2020, "Corolla");
-// console.log(myCar.getInfo());
-// console.log(myCar.getModel()); 
-// Problem-5
 function processValue(value) {
     if (typeof value === 'string') {
         return value.length;
@@ -68,9 +58,6 @@ function processValue(value) {
         return value * 2;
     }
 }
-// console.log(processValue("Hello"));
-// console.log(processValue(12)); 
-// Problem-6
 const products = [
     { name: "Pen", price: 10 },
     { name: "Notebook", price: 25 },
@@ -85,8 +72,6 @@ function getMostExpensiveProduct(products) {
         return products.find(product => product.price === maxPrice) || null;
     }
 }
-// console.log(getMostExpensiveProduct(products));
-// Problem-7
 var Day;
 (function (Day) {
     Day[Day["Monday"] = 0] = "Monday";
@@ -105,9 +90,6 @@ function getDayType(day) {
         return "Weekday";
     }
 }
-// console.log(getDayType(Day.Monday));
-// console.log(getDayType(Day.Sunday));
-// Problem-8
 function squareAsync(n) {
     return __awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => {
@@ -122,5 +104,3 @@ function squareAsync(n) {
         });
     });
 }
-squareAsync(5).then(console.log);
-squareAsync(-4).catch(console.error);

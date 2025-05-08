@@ -1,5 +1,5 @@
 
-// Problem-1
+
 function formatString(input: string, toUpper?: boolean): string {
     if (toUpper === false) {
         console.log(input.toLowerCase());
@@ -9,11 +9,9 @@ function formatString(input: string, toUpper?: boolean): string {
     return "Invalid input";
 }
 
-// formatString("Hello", true);
 
 
 
-// Problem-2
 const books = [
     { title: "Book A", rating: 4.5 },
     { title: "Book B", rating: 3.2 },
@@ -24,21 +22,19 @@ function filterByRating(items: { title: string; rating: number }[]): { title: st
     const filterBooks = items.filter(book => book.rating >= 4);
     return filterBooks
 }
-// console.log(filterByRating(books))
 
 
 
-// Problem-3
+
 function concatenateArrays<T>(...arrays: T[][]): T[] {
     const concatArray = arrays.flat();
     console.log(concatArray)
     return concatArray
 }
 
-// concatenateArrays(["a", "b"], ["c"], ['d']); 
 
 
-// Problem-4
+
 class Vehicle {
     private make: string;
     private year: number;
@@ -67,12 +63,10 @@ class Car extends Vehicle {
 }
 
 const myCar = new Car("Toyota", 2020, "Corolla");
-// console.log(myCar.getInfo());
-// console.log(myCar.getModel()); 
 
 
 
-// Problem-5
+
 
 function processValue(value: string | number): number {
     if (typeof value === 'string') {
@@ -81,13 +75,11 @@ function processValue(value: string | number): number {
         return value * 2;
     }
 }
-
-// console.log(processValue("Hello"));
-// console.log(processValue(12)); 
+ 
 
 
 
-// Problem-6
+
 const products = [
     { name: "Pen", price: 10 },
     { name: "Notebook", price: 25 },
@@ -107,11 +99,11 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
         return products.find(product => product.price === maxPrice) || null;
     }
 }
-// console.log(getMostExpensiveProduct(products));
 
 
 
-// Problem-7
+
+
 enum Day {
     Monday,
     Tuesday,
@@ -129,12 +121,11 @@ function getDayType(day: Day): string {
         return "Weekday";
     }
 }
-// console.log(getDayType(Day.Monday));
-// console.log(getDayType(Day.Sunday));
 
 
 
-// Problem-8
+
+
 async function squareAsync(n: number): Promise<number> {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -147,5 +138,3 @@ async function squareAsync(n: number): Promise<number> {
     })
 }
 
-squareAsync(5).then(console.log);
-squareAsync(-4).catch(console.error);
