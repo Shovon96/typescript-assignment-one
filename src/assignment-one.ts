@@ -20,9 +20,9 @@ const books = [
 
 function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
     const filterBooks = items.filter(book => book.rating >= 4);
+    console.log(filterBooks)
     return filterBooks
 }
-
 
 
 
@@ -31,7 +31,6 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
     console.log(concatArray)
     return concatArray
 }
-
 
 
 
@@ -45,8 +44,10 @@ class Vehicle {
 
     }
     getInfo(): string {
-        return `Make: ${this.make}, Year: ${this.year}`
-    }
+        const info = `Make: ${this.make}, Year: ${this.year}`;
+        console.log(info);
+        return info;
+      }
 }
 
 class Car extends Vehicle {
@@ -58,7 +59,9 @@ class Car extends Vehicle {
     }
 
     getModel(): string {
-        return `Model: ${this.model}`
+        const model = `Model: ${this.model}`;
+        console.log(model);
+        return model;
     }
 }
 
@@ -70,12 +73,15 @@ const myCar = new Car("Toyota", 2020, "Corolla");
 
 function processValue(value: string | number): number {
     if (typeof value === 'string') {
-        return value.length;
+        const valueLength = value.length;
+        console.log(valueLength)
+        return valueLength;
     } else {
-        return value * 2;
+        const multipliedNumber = value * 2;
+        console.log(multipliedNumber)
+        return multipliedNumber;
     }
 }
- 
 
 
 
@@ -93,13 +99,16 @@ interface Product {
 
 function getMostExpensiveProduct(products: Product[]): Product | null {
     if (products.length === 0) {
-        return null;
+        const result = null;
+        console.log(result);
+        return result;
     } else {
         const maxPrice = Math.max(...products.map(product => product.price));
-        return products.find(product => product.price === maxPrice) || null;
+        const findMaxPrice = products.find(product => product.price === maxPrice) || null;
+        console.log(findMaxPrice)
+        return findMaxPrice;
     }
 }
-
 
 
 
@@ -116,12 +125,15 @@ enum Day {
 
 function getDayType(day: Day): string {
     if (day === Day.Saturday || day === Day.Sunday) {
-        return 'Weekend';
+        const findWeekend = 'Weekend';
+        console.log(findWeekend)
+        return findWeekend;
     } else {
-        return "Weekday";
+        const findWeekday = "Weekday";
+        console.log(findWeekday)
+        return findWeekday;
     }
 }
-
 
 
 
@@ -130,7 +142,7 @@ async function squareAsync(n: number): Promise<number> {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if(n < 0){
-                reject ("Negative number not allowed");
+                reject(new Error("Negative number not allowed"));
             }else {
                 resolve (n * n);
             }

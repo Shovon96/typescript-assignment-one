@@ -24,6 +24,7 @@ const books = [
 ];
 function filterByRating(items) {
     const filterBooks = items.filter(book => book.rating >= 4);
+    console.log(filterBooks);
     return filterBooks;
 }
 function concatenateArrays(...arrays) {
@@ -37,7 +38,9 @@ class Vehicle {
         this.year = year;
     }
     getInfo() {
-        return `Make: ${this.make}, Year: ${this.year}`;
+        const info = `Make: ${this.make}, Year: ${this.year}`;
+        console.log(info);
+        return info;
     }
 }
 class Car extends Vehicle {
@@ -46,16 +49,22 @@ class Car extends Vehicle {
         this.model = model;
     }
     getModel() {
-        return `Model: ${this.model}`;
+        const model = `Model: ${this.model}`;
+        console.log(model);
+        return model;
     }
 }
 const myCar = new Car("Toyota", 2020, "Corolla");
 function processValue(value) {
     if (typeof value === 'string') {
-        return value.length;
+        const valueLength = value.length;
+        console.log(valueLength);
+        return valueLength;
     }
     else {
-        return value * 2;
+        const multipliedNumber = value * 2;
+        console.log(multipliedNumber);
+        return multipliedNumber;
     }
 }
 const products = [
@@ -65,11 +74,15 @@ const products = [
 ];
 function getMostExpensiveProduct(products) {
     if (products.length === 0) {
-        return null;
+        const result = null;
+        console.log(result);
+        return result;
     }
     else {
         const maxPrice = Math.max(...products.map(product => product.price));
-        return products.find(product => product.price === maxPrice) || null;
+        const findMaxPrice = products.find(product => product.price === maxPrice) || null;
+        console.log(findMaxPrice);
+        return findMaxPrice;
     }
 }
 var Day;
@@ -84,10 +97,14 @@ var Day;
 })(Day || (Day = {}));
 function getDayType(day) {
     if (day === Day.Saturday || day === Day.Sunday) {
-        return 'Weekend';
+        const findWeekend = 'Weekend';
+        console.log(findWeekend);
+        return findWeekend;
     }
     else {
-        return "Weekday";
+        const findWeekday = "Weekday";
+        console.log(findWeekday);
+        return findWeekday;
     }
 }
 function squareAsync(n) {
@@ -95,7 +112,7 @@ function squareAsync(n) {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 if (n < 0) {
-                    reject("Negative number not allowed");
+                    reject(new Error("Negative number not allowed"));
                 }
                 else {
                     resolve(n * n);
