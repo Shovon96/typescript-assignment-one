@@ -107,4 +107,45 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
         return products.find(product => product.price === maxPrice) || null;
     }
 }
-console.log(getMostExpensiveProduct(products));  
+// console.log(getMostExpensiveProduct(products));
+
+
+
+// Problem-7
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+}
+
+function getDayType(day: Day): string {
+    if (day === Day.Saturday || day === Day.Sunday) {
+        return 'Weekend';
+    } else {
+        return "Weekday";
+    }
+}
+// console.log(getDayType(Day.Monday));
+// console.log(getDayType(Day.Sunday));
+
+
+
+// Problem-8
+async function squareAsync(n: number): Promise<number> {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(n < 0){
+                reject ("Negative number not allowed");
+            }else {
+                resolve (n * n);
+            }
+        }, 1000);
+    })
+}
+
+squareAsync(5).then(console.log);
+squareAsync(-4).catch(console.error);
